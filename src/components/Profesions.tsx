@@ -13,17 +13,17 @@ const Profesions = () => {
     const [text, setText] = useState("█");
 
     useEffect(() => {
-        let timeoutId: NodeJS.Timeout;
+        let timeoutId: number;
 
         if (text.length <= textArray[currentIndex].length) {
-            timeoutId = setTimeout(() => {
+            timeoutId = (setTimeout(() => {
                 setText(textArray[currentIndex].substring(0, text.length) + '█');
-            }, 300);
+            }, 300)) as unknown as number;
         } else {
-            timeoutId = setTimeout(() => {
+            timeoutId = (setTimeout(() => {
                 setText("█");
                 setCurrentIndex((currentIndex + 1) % textArray.length);
-            }, 1000);
+            }, 1000)) as unknown as number;
         }
 
         return () => {
