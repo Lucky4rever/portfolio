@@ -1,0 +1,10 @@
+export { default as Bootstrap } from "./Bootstrap.png";
+export { default as Csharp } from "./Csharp.png";
+export { default as MsSQL } from "./MsSQL.png";
+export { default as Neo4j } from "./Neo4j.jpg";
+export { default as React } from "./React.png";
+export { default as SASS } from "./SASS.png";
+export { default as TS } from "./TS.png";
+export { default as ExpressJS } from "./ExpressJS.png";
+export { default as FramerMotion } from "./framer-motion.svg";
+export { default as Astro } from "./Astro.png";

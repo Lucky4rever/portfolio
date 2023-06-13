@@ -1,0 +1,9 @@
+export { default as About } from "./About";
+export { default as Floater } from "./Floater";
+export { default as Header } from "./Header";
+export { default as Loader } from "./Loader";
+export { default as Profesions } from "./Profesions";
+export { default as TitleContent } from "./TitleContent";
+export { default as Skills } from "./Skills";
+export { default as ScrollTracker } from "./ScrollTracker";
+export { default as ContactForm } from "./ContactForm";
