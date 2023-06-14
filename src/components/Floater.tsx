@@ -54,7 +54,6 @@ const LogoLayout = styled.a`
 
 const Floater = () => {
     const floaterRef = useRef(null);
-    const isHeaderVisible = useRef(true);
 
     interface LogoLayour {
         link?: string,
@@ -70,15 +69,19 @@ const Floater = () => {
     };
 
     useEffect(() => {
-        const handleScroll = () => {
-            isHeaderVisible.current = window.pageYOffset / window.innerHeight >= 0.85 ? false : true;
+        const toggleHiddenClass = (isAdd: boolean) => {
             if (floaterRef.current) {
-                isHeaderVisible.current ?
+                isAdd ?
                     (floaterRef.current as HTMLElement).classList.add("hidden")
                     : (floaterRef.current as HTMLElement).classList.remove("hidden");
             }
         };
 
+        const handleScroll = () => {
+            toggleHiddenClass(window.scrollY / window.innerHeight >= 0.85 ? false : true);
+        };
+
+        toggleHiddenClass(true);
         window.addEventListener("scroll", handleScroll);
 
         return () => {

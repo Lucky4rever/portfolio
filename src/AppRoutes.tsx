@@ -1,5 +1,5 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
-import { HomePage, Projects, Contact } from "./pages";
+import { HomePage, Projects, Contact } from "./devPages";
 
 export const StartLink = "/portfolio";
 
