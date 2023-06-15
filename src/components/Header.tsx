@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import logo from "/Logo.svg";
 import { useEffect, useRef } from "react";
-import { StartLink } from "../AppRoutes";
 
 const HeaderLayout = styled.div`
     box-sizing: border-box;
@@ -125,10 +124,10 @@ const Header = () => {
     return (
         <HeaderLayout ref={headerRef}>
             <Collapse>
-                <Logo link={StartLink} text="ortfolio" />
+                <Logo link={"/"} text="ortfolio" />
                 <LinkMenuLayout>
-                    <LinkLayout><Link href={StartLink + "/projects"}>Projects</Link></LinkLayout>
-                    <LinkLayout><Link href={StartLink + "/contact"}>Contact</Link></LinkLayout>
+                    <LinkLayout><Link href={"/projects"}>Projects</Link></LinkLayout>
+                    <LinkLayout><Link href={"/contact"}>Contact</Link></LinkLayout>
                 </LinkMenuLayout>
             </Collapse>
         </HeaderLayout>

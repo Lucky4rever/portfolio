@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import logo from "/Logo.svg";
 import { useEffect, useRef } from "react";
-import { StartLink } from "../AppRoutes";
 
 const FloaterLayout = styled.div`
     position: fixed;
@@ -98,18 +97,18 @@ const Floater = () => {
     
     return (
         <FloaterLayout ref={floaterRef}>
-            <Logo link={StartLink} onClick={(e) => handleLinkClick(e, StartLink)} />
+            <Logo link={"/"} onClick={(e) => handleLinkClick(e, "/")} />
             
             <a 
-                href={StartLink + "/projects"} 
+                href={"/projects"} 
                 className="text important" 
-                onClick={(e) => handleLinkClick(e, StartLink + "/projects")}
+                onClick={(e) => handleLinkClick(e, "/projects")}
             >Projects</a>
 
             <a 
-                href={StartLink + "/contact"} 
+                href={"/contact"} 
                 className="text important" 
-                onClick={(e) => handleLinkClick(e, StartLink + "/contact")}
+                onClick={(e) => handleLinkClick(e, "/contact")}
             >Contact</a>
         </FloaterLayout>
     )

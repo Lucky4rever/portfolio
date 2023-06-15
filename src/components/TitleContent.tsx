@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { Profesions } from ".";
 import CloudStation from "./canvas/CloudStation";
 import background from "../assets/img/background.jpg";
-import { StartLink } from "../AppRoutes";
 
 const Background = styled.div`
   position: absolute;
@@ -108,7 +107,7 @@ const TitleContent = () => {
               <Title>Hi!</Title>
               <div><span className="text">My name is <span className="important">Pavlo</span></span></div>
               <div><span className="text">I'm <span className="important"><Profesions /></span></span></div>
-              <HireButton href={StartLink + "/contact"}>Hire me!</HireButton>
+              <HireButton href={"/contact"}>Hire me!</HireButton>
           </motion.div>
           <div id="right">
               <CloudStation />

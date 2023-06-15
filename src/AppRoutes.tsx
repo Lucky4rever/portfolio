@@ -1,24 +1,18 @@
-import { Navigate, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { HomePage, Projects, Contact } from "./devPages";
-
-export const StartLink = "/portfolio";
 
 const AppRoutes = createBrowserRouter([
     {
         path: "/",
-        element: <Navigate to={StartLink} />
-    },
-    {
-        path: StartLink,
         element: <HomePage />,
         errorElement: <div>Ooops, there're nothing</div>
     },
     {
-        path: StartLink + "/projects",
+        path: "/projects",
         element: <Projects />,
     },
     {
-        path: StartLink + "/contact",
+        path: "/contact",
         element: <Contact />,
     },
 ]);
